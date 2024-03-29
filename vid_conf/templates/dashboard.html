@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>    
+    <link rel="stylesheet" href="{% static 'styles/register.css' %}">
+</head>
+<body>
+    <div class="container clear">
+        <h1 class="topical">Welcome, {{name}}!</h1>
+        <div class="btns-contained">
+            <a href="{% url 'meeting' %}"><button class="button">New Meeting</button></a>
+            <a href="{% url 'join' %}"><button class="button">Join Meeting</button></a>
+            <a href="{% url 'logout' %}"><button class="button">Logout</button></a>
+        </div>
+    </div>
+</body>
+</html>

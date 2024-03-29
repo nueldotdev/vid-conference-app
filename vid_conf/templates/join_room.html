@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'styles/register.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="login form">
+          <header>Join Room</header>
+          <form action="{% url 'join' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" placeholder="Enter room ID" name="roomID">
+            <input type="submit" class="button" value="Enter">
+          </form>
+          <center>
+            {% if error %}
+              <p style="color: red;">{{ error }}</p>
+            {% endif %}
+          </center>
+        </div>
+    </div>
+</body>
+</html>

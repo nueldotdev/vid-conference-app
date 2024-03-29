@@ -1,0 +1,8 @@
+manage.py
+
+
+py3/
+__pycache__/
+migrations/
+__init__.py
+db.sqlite3
